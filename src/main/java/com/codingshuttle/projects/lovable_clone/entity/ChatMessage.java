@@ -1,5 +1,6 @@
 package com.codingshuttle.projects.lovable_clone.entity;
 
+import com.codingshuttle.projects.lovable_clone.enums.MessageRole;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,13 +11,12 @@ import java.time.Instant;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class User {
+public class ChatMessage {
     Long id;
-    String email;
-    String passwordHash;
-    String name;
-    String avatarUrl;
+    ChatSession chatSession;
+    String content;
+    MessageRole role;
+    String toolCalls; // JSON string representing tool calls
+    Integer tokensUsed;
     Instant createdAt;
-    Instant updatedAt;
-    Instant deletedAt;
 }

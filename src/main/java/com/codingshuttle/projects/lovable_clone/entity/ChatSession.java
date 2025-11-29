@@ -10,12 +10,10 @@ import java.time.Instant;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class User {
-    Long id;
-    String email;
-    String passwordHash;
-    String name;
-    String avatarUrl;
+public class ChatSession {
+    Project project;
+    User user;
+    String title;
     Instant createdAt;
     Instant updatedAt;
     Instant deletedAt;

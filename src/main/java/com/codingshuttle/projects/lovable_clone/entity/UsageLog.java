@@ -10,13 +10,14 @@ import java.time.Instant;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class User {
+public class UsageLog {
     Long id;
-    String email;
-    String passwordHash;
-    String name;
-    String avatarUrl;
+    User user;
+    Project project;
+    String action;
+    Integer tokensUsed;
+    Integer durationMs;
+    String metadata; // JSON of model and prompt used
     Instant createdAt;
-    Instant updatedAt;
-    Instant deletedAt;
+
 }

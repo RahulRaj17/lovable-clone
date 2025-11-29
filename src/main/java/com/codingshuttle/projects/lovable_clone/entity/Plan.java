@@ -5,18 +5,16 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
-import java.time.Instant;
-
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class User {
+public class Plan {
     Long id;
-    String email;
-    String passwordHash;
     String name;
-    String avatarUrl;
-    Instant createdAt;
-    Instant updatedAt;
-    Instant deletedAt;
+    String stripePriceId; // Stripe Price ID for the plan
+    Integer maxProjects;
+    Integer maxTokensPerDay;
+    Integer maxPreviews;
+    Boolean unlimitedAi;
+    Boolean active;
 }
